@@ -1,5 +1,7 @@
 <?php
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\ProductFilter;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,3 +20,4 @@ Route::get('/', function () {
 });
 Route::get('/form',[FormController::class,'index']);
 Route::post('/form',[FormController::class,'formSubmit'])->name('form.formsubmit');
+Route::get('/product',[ProductFilter::class,'product']);
